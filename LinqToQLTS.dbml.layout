@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.375" name="LinqToQLTS">
+  <DataContextMoniker Name="/LinqToQLTSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1cadd2eb-ad1a-4f8c-aac8-ad3425273235" absoluteBounds="3.25, 6.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/LinqToQLTSDataContext/BOPHAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7caf7da8-cbf9-4f3d-a49b-02cc7c5e9611" absoluteBounds="3.265, 7.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3364862d-3401-4159-85b7-5c48ea09c579" absoluteBounds="3.25, 4.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LinqToQLTSDataContext/XUATXU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6cc43ae-420d-4e79-890a-2075f19bdb07" absoluteBounds="3.265, 5.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d5da2b1-1f74-4ade-986c-fce58189f6a2" absoluteBounds="3.25, 8.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/LinqToQLTSDataContext/LOAITAISAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b670b853-3d37-4346-b6e9-039350e13dfd" absoluteBounds="3.265, 9.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a2d1416-855b-4c82-bc3d-5c858a0929b3" absoluteBounds="8.25, 5.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/LinqToQLTSDataContext/NGUOIDUNG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb141b97-22e1-4b1d-b600-40413b7851a1" absoluteBounds="8.265, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2d9f618-c3f1-4667-9e59-70b67f78b578" absoluteBounds="3.25, 2.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LinqToQLTSDataContext/NGUONQUY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e31df5b4-e4fe-4600-8b78-73928d579781" absoluteBounds="3.265, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab9d14f6-0015-4381-94c2-9d02854697d7" absoluteBounds="6, 1.25, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/LinqToQLTSDataContext/TAISAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee29ddb9-c16d-497b-a338-c569f8f5591a" absoluteBounds="6.0150000000000006, 1.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb4d0d4b-b4b2-4890-8e1b-bebc51f5a2e8" absoluteBounds="8.75, 1.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/LinqToQLTSDataContext/THANHLYT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9e1b23b-3000-4286-a64a-eaf0d1568379" absoluteBounds="8.765, 2.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 7.31814697265625); (7 : 7.31814697265625); (7 : 4.17470540364583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinqToQLTSDataContext/BOPHAN/BOPHAN_TAISAN" />
+      <nodes>
+        <classShapeMoniker Id="1cadd2eb-ad1a-4f8c-aac8-ad3425273235" />
+        <classShapeMoniker Id="ab9d14f6-0015-4381-94c2-9d02854697d7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 9.44314697265625); (6.4687475 : 9.44314697265625); (6.4687475 : 4.17470540364583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinqToQLTSDataContext/LOAITAISAN/LOAITAISAN_TAISAN" />
+      <nodes>
+        <classShapeMoniker Id="6d5da2b1-1f74-4ade-986c-fce58189f6a2" />
+        <classShapeMoniker Id="ab9d14f6-0015-4381-94c2-9d02854697d7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 2.72199625651042); (6 : 2.72199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinqToQLTSDataContext/NGUONQUY/NGUONQUY_TAISAN" />
+      <nodes>
+        <classShapeMoniker Id="f2d9f618-c3f1-4667-9e59-70b67f78b578" />
+        <classShapeMoniker Id="ab9d14f6-0015-4381-94c2-9d02854697d7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 5.22199625651042); (6.38541416666667 : 5.22199625651042 : JumpStart); (6.55208083333333 : 5.22199625651042 : JumpEnd); (6.91666666666667 : 5.22199625651042 : JumpStart); (7.08333333333333 : 5.22199625651042 : JumpEnd); (7.5312525 : 5.22199625651042); (7.5312525 : 4.17470540364583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinqToQLTSDataContext/XUATXU/XUATXU_TAISAN" />
+      <nodes>
+        <classShapeMoniker Id="3364862d-3401-4159-85b7-5c48ea09c579" />
+        <classShapeMoniker Id="ab9d14f6-0015-4381-94c2-9d02854697d7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 2.63544840494792); (8.75 : 2.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinqToQLTSDataContext/TAISAN/TAISAN_THANHLYT" />
+      <nodes>
+        <classShapeMoniker Id="ab9d14f6-0015-4381-94c2-9d02854697d7" />
+        <classShapeMoniker Id="fb4d0d4b-b4b2-4890-8e1b-bebc51f5a2e8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

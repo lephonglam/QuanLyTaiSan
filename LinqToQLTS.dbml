@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyTaiSan" Class="LinqToQLTSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=34.41.188.38;Initial Catalog=QuanLyTaiSan;User ID=phonglam;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="QuanLyTaiSan.Properties.Settings" SettingsPropertyName="QuanLyTaiSanConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BOPHAN" Member="BOPHANs">
+    <Type Name="BOPHAN">
+      <Column Name="MaBP" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenBP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChucNang" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="BOPHAN_TAISAN" Member="TAISANs" ThisKey="MaBP" OtherKey="MaBP" Type="TAISAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.XUATXU" Member="XUATXUs">
+    <Type Name="XUATXU">
+      <Column Name="MaXuatXu" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NoiXuatXu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="XUATXU_TAISAN" Member="TAISANs" ThisKey="MaXuatXu" OtherKey="MaXuatXu" Type="TAISAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAITAISAN" Member="LOAITAISANs">
+    <Type Name="LOAITAISAN">
+      <Column Name="MaLoai" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="KhauHao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LOAITAISAN_TAISAN" Member="TAISANs" ThisKey="MaLoai" OtherKey="MaLoai" Type="TAISAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NGUOIDUNG" Member="NGUOIDUNGs">
+    <Type Name="NGUOIDUNG">
+      <Column Name="TaiKhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhanQuyen" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NGUONQUY" Member="NGUONQUYs">
+    <Type Name="NGUONQUY">
+      <Column Name="MaNguon" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNguon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="NGUONQUY_TAISAN" Member="TAISANs" ThisKey="MaNguon" OtherKey="MaNguon" Type="TAISAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAISAN" Member="TAISANs">
+    <Type Name="TAISAN">
+      <Column Name="MaTS" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTS" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DVT" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoai" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaXuatXu" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNguon" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaBP" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TAISAN_THANHLYT" Member="THANHLYTs" ThisKey="MaTS" OtherKey="MaTS" Type="THANHLYT" />
+      <Association Name="BOPHAN_TAISAN" Member="BOPHAN" ThisKey="MaBP" OtherKey="MaBP" Type="BOPHAN" IsForeignKey="true" />
+      <Association Name="LOAITAISAN_TAISAN" Member="LOAITAISAN" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAITAISAN" IsForeignKey="true" />
+      <Association Name="NGUONQUY_TAISAN" Member="NGUONQUY" ThisKey="MaNguon" OtherKey="MaNguon" Type="NGUONQUY" IsForeignKey="true" />
+      <Association Name="XUATXU_TAISAN" Member="XUATXU" ThisKey="MaXuatXu" OtherKey="MaXuatXu" Type="XUATXU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THANHLYTS" Member="THANHLYTs">
+    <Type Name="THANHLYT">
+      <Column Name="MaTL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaTS" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TAISAN_THANHLYT" Member="TAISAN" ThisKey="MaTS" OtherKey="MaTS" Type="TAISAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.HoaDonThanhLyTS" Method="HoaDonThanhLyTS">
+    <Parameter Name="MaTS" Parameter="maTS" Type="System.String" DbType="NVarChar(10)" />
+    <ElementType Name="HoaDonThanhLyTSResult">
+      <Column Name="TenTS" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaTS" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

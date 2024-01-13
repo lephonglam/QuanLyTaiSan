@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTaiSan", "QuanLyTaiSan.csproj", "{D851176D-871A-4954-A8F8-F76E8920E105}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{6D9C8744-69FD-41C5-8FED-E4EF9A79FAA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D851176D-871A-4954-A8F8-F76E8920E105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D851176D-871A-4954-A8F8-F76E8920E105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D851176D-871A-4954-A8F8-F76E8920E105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D851176D-871A-4954-A8F8-F76E8920E105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9C8744-69FD-41C5-8FED-E4EF9A79FAA4}.Debug|Any CPU.ActiveCfg = Debug
+		{6D9C8744-69FD-41C5-8FED-E4EF9A79FAA4}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A83E844D-E2A8-499C-B70C-70E074689D79}
+	EndGlobalSection
+EndGlobal
